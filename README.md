@@ -15,7 +15,7 @@ Built a client facing API using flask.
 
      
 
-#Code and Resources Used
+# Code and Resources Used
 
 Python Version: 3.7
 Packages: pandas, numpy, sklearn, matplotlib, seaborn, selenium, flask, json, pickle
@@ -26,7 +26,7 @@ Flask Productionization: https://towardsdatascience.com/productionize-a-machine-
 
 
 
-#Data Cleaning
+# Data Cleaning
 
 After scraping the data, I needed to clean it up so that it was usable for our model. I made the following changes and created the following variables:
 
@@ -39,7 +39,7 @@ Added a column for if the job was at the company’s headquarters
 Transformed founded date into age of company
 
 
-#Model Building
+# Model Building
 
 First, I transformed the categorical variables into dummy variables. I also split the data into train and tests sets with a test size of 20%.
 
@@ -51,7 +51,7 @@ I tried three different models:
     Lasso Regression – Because of the sparse data from the many categorical variables, I thought a normalized regression like lasso would be effective.
     Random Forest – Again, with the sparsity associated with the data, I thought that this would be a good fit.
 
-#Model performance
+# Model performance
 
 The Random Forest model far outperformed the other approaches on the test and validation sets.
 
@@ -60,7 +60,7 @@ The Random Forest model far outperformed the other approaches on the test and va
     Ridge Regression: MAE = 19.67
 
 
-#Productionization
+#   Productionization
 
 In this step, I built a flask API endpoint that was hosted on a local webserver by following along with the TDS tutorial in the reference section above. The API endpoint takes in a request with a list of values from a job listing and returns an estimated salary.
 
